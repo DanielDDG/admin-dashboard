@@ -17,6 +17,7 @@ body {
 
 .container {
     display: grid;
+    grid-template-columns: 1fr 3fr;
     margin: 10px;
     background-color: rgb(165, 241, 241);
     border: 1px solid rgb(113, 230, 230);
@@ -25,4 +26,70 @@ body {
     -moz-box-shadow: -2px 2px 19px -3px rgba(0,0,0,0.75);
     box-shadow: -2px 2px 19px -3px rgba(0,0,0,0.75);
     width: 100%;
+}
+
+.sidebar {
+    display: grid;
+    grid-template: 1fr 2fr 3fr / 1fr 3fr;
+    font-size: x-large;
+    font-family: Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    gap: 10px;
+    margin: 40px;
+    height: 840px;
+    align-self: stretch;
+    justify-self: stretch;
+    grid-column: 1 / 2;
+}
+
+.dashbar {
+    display: flex;
+    gap: 10px;
+}
+
+.iconcolumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-row-start: 2;
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+}
+
+.textcolumn {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-left: -155px;
+    grid-row-start: 2;
+}
+
+#dashicon {
+    height: 50px;
+    width: 50px;
+}
+
+#dashtext {
+    grid-column-start: 2;
+    font-size: 27px;
+    margin-top: 5px;
+}
+
+.iconcolumn :nth-child(1),
+.textcolumn :nth-child(1) {
+    margin-top: 70px;
+}
+
+.iconcolumn :nth-child(7),
+.textcolumn :nth-child(7) {
+    margin-top: 70px;
+}
+
+.header {
+    background-color: black;
+    border-top-right-radius: 3px;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    height: 150px;
 }
